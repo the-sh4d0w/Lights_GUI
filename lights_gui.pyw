@@ -1,10 +1,11 @@
 import json
+import os
 import tkinter
 
 import phue
 import rgbxy
 
-with open("config.json") as f:
+with open(so.path.realpath("lights_gui.pyw").replace("lights_gui.pyw", "config.json")) as f:
     config = json.loads(f.read())
 
 bridge = phue.Bridge(config["IP"])
